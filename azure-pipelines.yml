@@ -35,7 +35,7 @@ stages:
         command: buildAndPush
         repository: $(imageName)
         dockerfile: $(dockerfilePath)
-        containerRegistry: $(azureSubscription)
+        containerRegistry: dotnetacr12345
         tags: |
           $(tag)
           latest
@@ -49,12 +49,12 @@ stages:
   - job: Deploy
     pool:
       name:
-        selhostedcicd
+        selfhostedcicd
     steps:
     - task: AzureWebAppContainer@1
       displayName: Deploy container to App Service
       inputs:
-        azureSubscription: $(azureSubscription)
+        azureSubscription: Azure-Service-Connection
         appName: $(appName)
         containers: |
           $(acrLoginServer)/$(imageName):latest
