@@ -15,8 +15,8 @@ RUN dotnet publish DotNetCrudWebApi/DotNetCrudWebApi.csproj \
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
-ENV ASPNETCORE_URLS=http://+:443
-EXPOSE 443
+ENV ASPNETCORE_URLS=http://+:80
+EXPOSE 80
 
 COPY --from=build /out .
 
