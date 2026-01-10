@@ -9,7 +9,7 @@ namespace DotNetCrudWebApi.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=./data/App.db");
+            optionsBuilder.UseSqlite("Data Source=./Data/App.db");
         }
     }
 }
