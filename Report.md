@@ -7,13 +7,13 @@ We utilized Minikube for local testing—a standard industry practice that allow
 
 # Why Microservices? (The Business Logic)
    
-Moving away from a "monolithic" (all-in-one) application to microservices is like moving from a single large engine to a fleet of specialized vehicles.
+- Moving away from a "monolithic" (all-in-one) application to microservices is like moving from a single large engine to a fleet of specialized vehicles.
 
-Agility & Speed: Different teams can work on different features (e.g., "User Profiles" vs. "Payments") simultaneously without stepping on each other's toes. This means we can release new features to customers faster.
+- Agility & Speed: Different teams can work on different features (e.g., "User Profiles" vs. "Payments") simultaneously without stepping on each other's toes. This means we can release new features to customers faster.
 
-Independent Scaling: If only the "Check-in" feature is busy on a Monday morning, we only scale that specific part, rather than the entire system. This saves significant cloud costs.
+- Independent Scaling: If only the "Check-in" feature is busy on a Monday morning, we only scale that specific part, rather than the entire system. This saves significant cloud costs.
 
-Resilience (Fault Isolation): If one small part of the app fails, the rest of the application stays online. The "BeStrong" app won't crash entirely just because of a minor glitch in one module.
+- Resilience (Fault Isolation): If one small part of the app fails, the rest of the application stays online. The "BeStrong" app won't crash entirely just because of a minor glitch in one module.
 
 # Why Kubernetes on Azure (AKS)?
 
@@ -30,15 +30,15 @@ Future-Proofing: Kubernetes is the industry standard. By adopting it now, we ens
 When we move from the PoC to the actual Azure environment, the architecture will look like this:
 <img width="700" height="661" alt="image" src="https://github.com/user-attachments/assets/fcc351d8-fa60-44ff-96e1-a2f3fdb9d036" />
 
-How it works for the user:
+- How it works for the user:
 
-The User connects to the application through a secure Azure Load Balancer.
+- The User connects to the application through a secure Azure Load Balancer.
 
-The API Gateway acts as the front door, directing the user to the right microservice.
+- The API Gateway acts as the front door, directing the user to the right microservice.
 
-AKS (The Cluster) manages all the microservices, ensuring they have the "brainpower" (CPU/RAM) they need.
+- AKS (The Cluster) manages all the microservices, ensuring they have the "brainpower" (CPU/RAM) they need.
 
-Azure Managed Databases keep the data safe, backed up, and separate for each service to prevent data tangles.
+- Azure Managed Databases keep the data safe, backed up, and separate for each service to prevent data tangles.
 
 # Conclusion & Next Steps:
 The PoC proves that the DotNet 8 API is ready for a modern, containerized environment. We have verified that the services can communicate, scale, and recover from failures locally.
