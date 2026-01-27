@@ -122,6 +122,8 @@ curl -X POST <http://192.168.49.2:30005/api/Movies>
 "releaseDate": "2010-07-16T00:00:00"  
 }'
 
+<img width="1606" height="622" alt="image" src="https://github.com/user-attachments/assets/9bffb635-a983-4057-9fb9-6c193f5757c6" />
+
 - Swagger UI
 
 <http://192.168.49.2:30005/swagger>
