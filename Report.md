@@ -3,7 +3,7 @@ PoC Report: Modernizing "BeStrong" with Kubernetes
    
 To ensure the "BeStrong" application can scale with our growing user base and remain highly reliable, we have successfully completed a Proof of Concept (PoC) using a microservice architecture managed by Kubernetes.
 
-We utilized Minikube for local testing—a standard industry practice that allows us to simulate a cloud environment on a single machine before moving to the Azure cloud. This approach minimizes risks and ensures that our code is "cloud-ready" from day one.
+We utilized Minikube for local testing - a standard industry practice that allows us to simulate a cloud environment on a single machine before moving to the Azure cloud. This approach minimizes risks and ensures that our code is "cloud-ready" from day one.
 
 # Why Microservices? (The Business Logic)
    
