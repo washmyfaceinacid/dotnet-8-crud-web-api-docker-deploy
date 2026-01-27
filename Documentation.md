@@ -1,6 +1,3 @@
-Here is a complete documentation guide for your project. You can save this as README.md in your repository.
-
-It covers everything we fixed: the multi-stage Docker build, the SQLite permission handling, and the Kubernetes deployment with named ports.
 
 .NET 8 Web API on Minikube (Documentation)
 This guide documents how to containerize a .NET 8 Web API using SQLite and deploy it to a local Kubernetes cluster (Minikube).
