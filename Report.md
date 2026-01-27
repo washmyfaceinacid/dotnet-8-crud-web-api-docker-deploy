@@ -1,4 +1,4 @@
-oC Report: Modernizing "BeStrong" with Kubernetes
+PoC Report: Modernizing "BeStrong" with Kubernetes
 1. Executive Summary
 To ensure the "BeStrong" application can scale with our growing user base and remain highly reliable, we have successfully completed a Proof of Concept (PoC) using a microservice architecture managed by Kubernetes.
 
