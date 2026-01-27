@@ -106,6 +106,9 @@ minikube service dotnet-api-service --url
 
 <http://192.168.49.2:30005>
 
+<img width="1267" height="113" alt="image" src="https://github.com/user-attachments/assets/83011d23-a582-4c9b-ac7c-06d85984d2e7" />
+
+
 # Test Endpoints
 
 - GET movies
