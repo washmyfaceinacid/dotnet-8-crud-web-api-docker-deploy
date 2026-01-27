@@ -1,8 +1,7 @@
 # Dockerfile
 
-# \-----------------------------
 
-# Stage 1: Build & Publish
+- Stage 1: Build & Publish
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build  
 WORKDIR /app
@@ -24,7 +23,7 @@ RUN dotnet publish DotNetCrudWebApi/DotNetCrudWebApi.csproj
 \-c Release   
 \-o /out
 
-# Stage 2: Runtime Environment
+- Stage 2: Runtime Environment
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0  
 WORKDIR /app
@@ -38,11 +37,7 @@ RUN mkdir -p /app/Data && chmod 777 /app/Data
 
 ENTRYPOINT \["/bin/sh", "-c", "./efbundle && dotnet DotNetCrudWebApi.dll"\]
 
-# \-----------------------------
-
 # Kubernetes Manifest (k8s-deploy.yaml)
-
-# \-----------------------------
 
 ## apiVersion: apps/v1  
 kind: Deployment  
@@ -77,59 +72,47 @@ ports:
 targetPort: 5000  
 nodePort: 30005
 
-# \-----------------------------
-
 # Deployment Commands
 
-# \-----------------------------
-
-# Point Docker to Minikube
+- Point Docker to Minikube
 
 eval $(minikube docker-env)
 
-# Build the image
+- Build the image
 
 docker build -t dotnet-8-api:#version .
 
-# Deploy to Kubernetes
+- Deploy to Kubernetes
 
 kubectl apply -f k8s-deploy.yaml
 
-# Force update if needed
+- Force update if needed
 
 kubectl replace --force -f k8s-deploy.yaml
 
-# Verify pod status
+- Verify pod status
 
 kubectl get pods
 
-# Check logs if CrashLoopBackOff
+- Check logs if CrashLoopBackOff
 
 kubectl logs <pod-name>
 
-# \-----------------------------
-
-# Access API
-
-# \-----------------------------
+- Access API
 
 minikube service dotnet-api-service --url
 
-# Example output
+- Example output
 
 <http://192.168.49.2:30005>
 
-# \-----------------------------
-
 # Test Endpoints
 
-# \-----------------------------
-
-# GET movies
+- GET movies
 
 curl <http://192.168.49.2:30005/api/Movies>
 
-# POST movie
+- POST movie
 
 curl -X POST <http://192.168.49.2:30005/api/Movies>   
 \-H "Content-Type: application/json"   
@@ -139,7 +122,7 @@ curl -X POST <http://192.168.49.2:30005/api/Movies>
 "releaseDate": "2010-07-16T00:00:00"  
 }'
 
-# Swagger UI
+- Swagger UI
 
 <http://192.168.49.2:30005/swagger>
 
