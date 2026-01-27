@@ -24,6 +24,7 @@ Future-Proofing: Kubernetes is the industry standard. By adopting it now, we ens
 
 4. Future Architecture Diagram (Azure Deployment)
 When we move from the PoC to the actual Azure environment, the architecture will look like this:
+<img width="700" height="661" alt="image" src="https://github.com/user-attachments/assets/fcc351d8-fa60-44ff-96e1-a2f3fdb9d036" />
 
 How it works for the user:
 
